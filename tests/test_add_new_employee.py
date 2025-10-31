@@ -19,7 +19,7 @@ def test_add_new_employee(driver):
     benefitspage.click_add_employee("Eduardo", "Larios")
     time.sleep(5)  # Just for debugging
     count_after = benefitspage.get_rowcount()
-    assert count_after == count_before + 1, "Employee count did not increase by 1 after adding new employee."
+    assert count_after == count_before + 1, "FAIL: New employee not registered."
 
 def test_cancel_add_new_employee(driver):
     loginpage = LoginPage(driver)
@@ -32,7 +32,7 @@ def test_cancel_add_new_employee(driver):
     benefitspage.click_cancel_popup("Eduardo", "Larios")
     time.sleep(5)  # Just for debugging
     count_after = benefitspage.get_rowcount()
-    assert count_before == count_after, "Employee count changed after cancelling add employee."
+    assert count_before == count_after, "FAIL: Cancel button not working"
 
 
     
