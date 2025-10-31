@@ -4,3 +4,6 @@
 .vscode/
 .idea/
 .pytest_cache/
+.DS_Store/
+logs/
+reports/    

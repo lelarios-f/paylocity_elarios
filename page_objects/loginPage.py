@@ -30,3 +30,4 @@ class LoginPage:
         self.enter_username(username)
         self.enter_password(password)
         self.click_login()
+        
