@@ -87,6 +87,7 @@ class benefitsPage:
             table = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, "//*[@id='employeesTable']"))
             )
+            time.sleep(3) #make sure the table is fully loaded
             rows = table.find_elements(By.TAG_NAME, "tr")
             return len(rows) - 1  # Subtract 1 for the header row
         except TimeoutException:

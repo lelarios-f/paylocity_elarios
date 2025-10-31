@@ -30,7 +30,7 @@ def test_cancel_add_new_employee(driver):
     benefitspage = benefitsPage(driver)
     count_before = benefitspage.get_rowcount()
     benefitspage.click_cancel_popup("Eduardo", "Larios")
-    time.sleep(5)  # Just for debugging
+    time.sleep(5)
     count_after = benefitspage.get_rowcount()
     assert count_before == count_after, "FAIL: Cancel button not working"
 
