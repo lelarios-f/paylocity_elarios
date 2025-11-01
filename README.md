@@ -1,4 +1,4 @@
-### --- Code designed by Luis Eduardo Larios Flores for the "Bug and Automaation Challenge" for Paylocity
+### --- Code designed by Luis Eduardo Larios Flores for the "Bug and Automation Challenge" for Paylocity
 
 ## -- Instructions to setup the environments -- ##
 
