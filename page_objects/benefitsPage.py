@@ -26,7 +26,8 @@ class benefitsPage:
         self.lastname_input = (By.XPATH, "//input[@id='lastName']") 
         self.dependents_input = (By.XPATH, "//input[@id='dependants']") 
         self.add_popup_button = (By.XPATH, "//button[@id='addEmployee']") 
-        self.cancel_popup_button = (By.XPATH, "//button[@class='btn btn-secondary']") 
+        self.cancel_popup_button = (By.XPATH, "//button[@class='btn btn-secondary']")
+        self.cancel_popup_button_delete = (By.XPATH, " //*[@id='deleteModal']/div/div/div[3]/button[2]")  
         self.update_button = (By.XPATH, "//*[@id='updateEmployee']")
 
     def click_add_employee(self, firstname, lastname, dependents = "0"):
@@ -72,7 +73,6 @@ class benefitsPage:
             WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, "employeesTable")))
             delete_button = self.driver.find_element(By.XPATH, f"//*[@id='employeesTable']/tbody/tr[{rowindex}]/td[9]/i[2]")
             delete_button.click()
-            WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.confirm_delete_button)).click()
             
         except TimeoutException:
             pass
@@ -139,7 +139,12 @@ class benefitsPage:
         except TimeoutException:
             return {}
 
-    def cancel_button_method(self):
+    def cancel_button_method(self, is_delete = False):
+        if is_delete:
+            WebDriverWait(self.driver, 10).until(
+                EC.element_to_be_clickable(self.cancel_popup_button_delete)
+            ).click()
+            return
         WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.cancel_popup_button)
         ).click()
@@ -147,4 +152,9 @@ class benefitsPage:
     def update_button_method(self):
         WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.update_button)
+        ).click()
+
+    def delete_button_method(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(self.confirm_delete_button)
         ).click()

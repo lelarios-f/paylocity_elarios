@@ -18,9 +18,12 @@
 1. Open the project in VS Code
 2. Open a terminal in VS Code
 3. Activate your virtual environment
-4. Run the next command:
+4. Make sure that the harcoded values exists:
+    1. In `test_update_employee.py` line 24 is a value for the Employee ID where the update will happen
+    2. In `test_delete_employee.py`line 22, there are a couple of commented lines if you desire to delete byID, otherwise always will delete the first record in the table
+5. Run the next command:
    * `pytest -s tests/`
-5. Find the results in the terminal
+6. Find the results in the terminal
 
 ## -- Running the tests for the APIs 
 1. Download the collection from the repository folde "Reports > elarios_paylocity_colletion.json> 
