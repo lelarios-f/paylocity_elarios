@@ -30,3 +30,8 @@
     2. You can select the main folder for the collection and in the top right you will find a "Run" button which will 
         guide you through a set up screen for the run of the complete collection
 4. You can review the summary of the test in the "Test Result" section of Postman
+
+## -- Additional Notes
+
+Please find in this repository in the folder "Reports > elarios_bugs_report_paylocity.xlsx" an excel with the documentation for all the bugs found during the challenge. 
+
