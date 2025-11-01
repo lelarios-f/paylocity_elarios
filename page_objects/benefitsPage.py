@@ -115,7 +115,6 @@ class benefitsPage:
                 dependents_input.clear()
                 dependents_input.send_keys(dependents)
                 flags[2] = True
-            self.driver.find_element(*self.update_button).click()
             return flags
             
         except TimeoutException:
@@ -139,3 +138,13 @@ class benefitsPage:
             return employee_details
         except TimeoutException:
             return {}
+
+    def cancel_button_method(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(self.cancel_popup_button)
+        ).click()
+    
+    def update_button_method(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(self.update_button)
+        ).click()
