@@ -1,0 +1,5 @@
+setuptools
+six
+urllib3
+selenium
+WebDriver-manager
