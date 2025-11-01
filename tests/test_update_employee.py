@@ -56,7 +56,7 @@ def test_cancel_update_employee(driver):
     loginpage.login("TestUser824", "/w]b4xL^2_qX")
     WebDriverWait(driver, 5).until(EC.url_contains("Benefits"))
     
-    rowindex = benefitspage.get_rowindex_by_id("72cdc636-632d-43bc-b68c-2cb981775a2b")
+    rowindex = benefitspage.get_rowindex_by_id("f701766b-8cd5-43ec-838f-cf8a45279548") ## Make sure the ID exists
     print(f"Cancelling update for employee at row index: {rowindex}")
 
     flags = benefitspage.update_employee_byID(ORIGINAL_FIRSTNAME,ORIGINAL_LASTNAME, ORIGINAL_DEPENDENTS, rowindex)
