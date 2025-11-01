@@ -26,7 +26,7 @@
 6. Find the results in the terminal
 
 ## -- Running the tests for the APIs 
-1. Download the collection from the repository folde "Reports > elarios_paylocity_colletion.json> 
+1. Download the collection from the repository folder named "Reports > elarios_paylocity_colletion.json> 
 2. Import the collection in Postman
 3. Here you got to options:
     1. You can go through every request and send them individually or
